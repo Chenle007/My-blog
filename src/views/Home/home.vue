@@ -1,37 +1,43 @@
 <template>
   <div id="main">
     <headernav></headernav>
-    <div id="Content">
-      <div class="leftContent">
-        <div class="leftContent1">
-          <img src="@/assets/blogcontent.jpg">
-          <h2>博客标题</h2>
-          <div class="blog-con">
-            测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容
-            测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容
-            测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容
-          </div>
-          <div class="blog-time">2021-1-20</div>
-          <button>查看全文 ></button>
-        </div>
-        <div class="leftContent2">
-          <img src="@/assets/blogcontent.jpg" alt="">
-          <h2>博客标题</h2>
-          <div class="blog-con">
-            测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容
-            测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容
-            测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容
-          </div>
-          <div class="blog-time">2021-1-20</div>
-          <button>查看全文 ></button>
-        </div>
-      </div>
+      <div id="blog">
+          <div class="blog-box">
+            <div class="blog-page">
+              <img src="@/assets/bg.jpg" alt="">
+              <div class="blog-content">
+                <h3>博客标题</h3>
+                <p>测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本
+                  测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本</p>
+                <div class="blog-time">2021-02-12</div>
+                <button>阅读全文></button>
+              </div>
+            </div>
 
+            <div class="blog-page">
+              <img src="@/assets/bg.jpg" alt="">
+              <div class="blog-content">
+                <h3>博客标题</h3>
+                 <p>测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本
+                 测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本</p>
+                <div class="blog-time">2021-02-12</div>
+                <button>阅读全文></button>
+              </div>
+            </div>
 
-      <div class="rightContent">
-        这里放登录信息
+          </div>
+
+        <div class="login">
+          <img src="/imgs/bg.jpg" alt="">
+          <div class="login-content">
+            <i class="iconfont icon-subscriber-fill"></i>
+            <span>未登录</span>
+            <router-link tag="button" to="/login">登录</router-link>
+          </div>
+          <p>来写篇文章吧+</p>
+        </div>
+
       </div>
-    </div>
 
     <pageFooter></pageFooter>
   </div>
@@ -52,55 +58,100 @@ export default {
 </script>
 
 <style scoped>
-#Content{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: 70%;
-  margin: 10px auto;
-  border-radius: 10px;
-}
-#Content .leftContent .leftContent1{
-  border: 1px black solid;
-  margin: 10px;
-  background: white;
-  border-radius: 5px;
-}
-#Content .leftContent .leftContent1 img{width: 800px;height: 200px}
-#Content .leftContent .leftContent2 img{width: 800px;height: 200px}
-#Content .leftContent .leftContent2{
-  border: 1px black solid;
-  margin: 10px;
-  background: white;
-  border-radius: 5px;
-}
-#Content .leftContent h2{
-  margin: 10px;
-}
-#Content .leftContent .blog-time{
-  margin: 10px;
-}
-#Content .leftContent .blog-con{
-  margin: 10px;
-  border-bottom: 1px solid black;
-  width: 800px;
-}
-#Content .leftContent button{
-  width: 80px;height: 40px;
-  background: #1890ff;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  margin-left: 720px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
+  #blog{
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+  }
+  #blog .blog-box{
+    width: 60%;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  #blog .blog-box .blog-page{
+    background: white;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  #blog .blog-box .blog-page img{
+    width: 100%;height: 100%;
+  }
+  #blog .blog-box .blog-content{
+    margin: 10px auto;
+  }
+  #blog .blog-box .blog-content h3{
+    border-bottom: 1px solid black;
+    margin: 10px;
+  }
+  #blog .blog-box .blog-content p{
+    color: gray;
+    margin: 10px;
+  }
+  #blog .blog-box .blog-content button{
+    margin-left: 10px;
+    cursor: pointer;
+    width: 80px;height: 30px;
+  }
+  #blog .blog-box .blog-content .blog-time{
+    margin: 10px;
+  }
 
-#Content .rightContent{
-  width: 400px;height: 400px;
-  border:1px solid black;
-  border-radius: 7px;
-  background: white;
-}
+  .login{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 50%;height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+  }
+  .login .login-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;height: 30%;
+  }
+  .login .login-content button{
+    width: 150px;height: 30px;
+    background: #1890ff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .login .login-content i{
+    font-size: 40px;
+  }
+  .login img {
+    width: 100%;height: 100%;
+  }
 
+  @media screen and (max-width: 850px){
+    #blog{
+      margin: 10px auto;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 660px) {
+    #blog{
+      width: 90%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+    #blog .blog-box{
+      width: 100%;
+      margin: 0 auto;
+    }
+    #blog .login{
+      width: 100%;
+      margin: 0 auto;
+    }
+
+  }
 </style>

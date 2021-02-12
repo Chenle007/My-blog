@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import homeRouter from './home'
-// import messageRouter from './message';
-// import aboutRouter from "./about";
 
 Vue.use(VueRouter)
 
@@ -26,6 +23,11 @@ const routes = [
         path: '/about',
         name:'about',
         component:()=>import('../views/About/about')
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component:()=>import('../views/Login/login')
     }
 ]
 const router = new VueRouter({
@@ -35,12 +37,3 @@ const router = new VueRouter({
 })
 export default router
 
-// export default new VueRouter({
-//     mode: 'history',
-//     base: process.env.BASE_URL,
-//     routes:[
-//         homeRouter,
-//         messageRouter,
-//         aboutRouter
-//     ]
-// })
