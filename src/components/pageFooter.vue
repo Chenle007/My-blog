@@ -1,4 +1,5 @@
 <template>
+  <!-- 页脚组件  -->
   <div id="pageFooter">
     <p>Copyright © 2021 by Myopia cat . All rights reserved.</p>
   </div>

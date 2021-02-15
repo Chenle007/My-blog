@@ -1,15 +1,20 @@
 <template>
+  <!-- 头部导航组件  -->
   <div id="headNav">
     <nav class="navbar">
+      <!--  导航标题与图标    -->
       <span><i class="iconfont icon-subscriber-fill"></i></span>
-      <span>Myopia cat blog</span>
+      <router-link tag="span" to="/">Myopia cat blog</router-link>
       <ul class="navbar-nav">
+
+        <!--   导航栏     -->
         <router-link tag="li" to="/home"><span class="nav-link">主页</span></router-link>
         <router-link tag="li" to="/message"><span class="nav-link">留言</span></router-link>
         <router-link tag="li" to="/about"><span class="nav-link">关于</span></router-link>
         <li><span class="nav-link">搜索</span></li>
       </ul>
 
+          <!--    适配移动端的导航      -->
           <ol class="menu-btn" @click="showMenuItem">
             <li></li>
             <li></li>
@@ -17,6 +22,7 @@
             <li></li>
           </ol>
 
+          <!--    适配移动端的导航      -->
           <ol class="menu-list" v-show="isShow">
             <router-link tag="li" to="/login">登录</router-link>
             <router-link tag="li" to="/message">留言</router-link>
@@ -26,6 +32,7 @@
       <ul class="navbar-nav ml-auto">
         <router-link tag="li" to="/login"><span class="nav-link">登录</span></router-link>
       </ul>
+
     </nav>
   </div>
 </template>
@@ -61,6 +68,7 @@ export default {
 }
 .navbar span{
   margin-right: 10px;
+  cursor: pointer;
 }
 .navbar i{
   margin-left: 10px;
@@ -68,6 +76,7 @@ export default {
 #headNav .navbar ul li span{
   position: relative;
 }
+/*鼠标经过时触发上下两条线的样式*/
 #headNav .navbar ul li span:before{
   content: "";
   position: absolute;
@@ -81,10 +90,12 @@ export default {
   transform-origin: right;
   transition: .5s;
 }
+/*鼠标经过时触发上下两条线的样式*/
 #headNav .navbar ul li span:hover:before{
   transform: scaleX(1);
   transform-origin: left;
 }
+/*鼠标经过时触发上下两条线的样式*/
 #headNav .navbar ul li span:after{
   content: "";
   position: absolute;
@@ -98,6 +109,7 @@ export default {
   transform-origin: left;
   transition: .5s;
 }
+/*鼠标经过时触发上下两条线的样式*/
 #headNav .navbar ul li span:hover:after{
   transform: scaleX(1);
   transform-origin: right;
@@ -135,7 +147,9 @@ export default {
   #headNav ul{
     display: none;
   }
-
+  .navbar span{
+    font-size: 1.3rem;
+  }
 
   #headNav .navbar .menu-btn{
     width: 50px;height: 50px;

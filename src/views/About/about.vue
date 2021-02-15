@@ -1,6 +1,8 @@
 <template>
   <div id="main">
     <headernav></headernav>
+
+    <!-- 关于我 页面 开发中   -->
     <p>test</p>
     <pageFooter></pageFooter>
   </div>

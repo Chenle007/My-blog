@@ -1,9 +1,13 @@
 <template>
   <div id="bg">
+    <!-- 网站首页（启动页）   -->
     <div class="box">
       <img src="/imgs/cat.jpg" class="box-img">
       <h1>Myopia cat blog</h1>
       <h5>测试文本测试文本测试文本测试文本测试文本测试文本</h5>
+
+
+      <!--  跳转QQ群以及进入博客    -->
       <ul>
         <li><i class="iconfont icon-QQ"></i></li>
         <li><i class="iconfont icon-github"></i></li>
@@ -39,6 +43,17 @@ name: "welcome"
   #bg .box{
     width: 80vw;
     margin: 20vw auto;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #bg .box{
+    width: 80vw;
+    font-size: 12px;
+  }
+  #bg .box .box-img{
+    width: 100px;height: 100px;
+    border-radius: 100%;
   }
 }
 
